@@ -1,0 +1,5 @@
+[{"id":125, "price":107000.0, "quantity":1, "book_id":4, "order_cartitems_id":124},
+ {"id":132, "price":35000.0, "quantity":1, "book_id":61, "order_cartitems_id":131},
+ {"id":135, "price":107000.0, "quantity":1, "book_id":4, "order_cartitems_id":134},
+ {"id":136, "price":204000.0, "quantity":2, "book_id":133, "order_cartitems_id":134},
+ {"id":138, "price":102000.0, "quantity":1, "book_id":133, "order_cartitems_id":137}]
