@@ -46,6 +46,7 @@ public class BookController {
 		
 		return "booksearch";
 	}
+	
 	@GetMapping("/tim-kiem/{size}")
 	public String search(ModelMap map,@RequestParam("search") String search,@PathVariable("size")String size) {
 		List<Book> Books = bookser.getBookByAuthorOrName(search,search);	

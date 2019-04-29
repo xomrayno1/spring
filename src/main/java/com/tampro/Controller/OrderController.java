@@ -122,24 +122,25 @@ public class OrderController {
 	}
 
 	@GetMapping(value = { "/thanh-toan" })
-	public String pay(ModelMap map,HttpSession session) {
+	public String pay(ModelMap map, HttpSession session) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication instanceof AnonymousAuthenticationToken) { // nếu như authencation là 1 Anonymous thì tức nó
 																		// chưa đăng nhập
 			return "redirect:/dang-nhap"; // chưa đăng nhập // giá trị của authencation.getName() là AnonymousUser
 
-		} else // đã đăng nhập // sau khi đăng nhập thì authencation k phải là anonymous ẩn  danh nữa
-				
+		} else // đã đăng nhập // sau khi đăng nhập thì authencation k phải là anonymous ẩn
+				// danh nữa
+
 		{
 			Users user = usersSer.getUsersByUsername(authentication.getName());
-			if(user.checkProfile()) {//đủ điều kiện
-				List<CartItem> listCartItem = (List<CartItem>)  session.getAttribute("cart");
+			if (user.checkProfile()) {// đủ điều kiện
+				List<CartItem> listCartItem = (List<CartItem>) session.getAttribute("cart");
 				Orders order = new Orders();
-				int totalprice = 0 ;
-				for(CartItem cart : listCartItem) {
+				int totalprice = 0;
+				for (CartItem cart : listCartItem) {
 					cart.setOrders(order);
-					//cartItemService.addCartitem(cart);
+					// cartItemService.addCartitem(cart);
 					totalprice += cart.getPrice();
 				}
 				order.setPrice(totalprice);
@@ -148,12 +149,11 @@ public class OrderController {
 				ordersService.addOrders(order);
 				session.removeAttribute("cart");
 				return "redirect:/user/lich-su-dat-hang";
-			}else {// không đủ điều kiện
+			} else {// không đủ điều kiện
 				return "redirect:/user/profile";
 			}
 		}
 
 	}
-	
 
 }

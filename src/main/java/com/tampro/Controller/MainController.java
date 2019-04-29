@@ -61,10 +61,7 @@ public class MainController {
 
 	@GetMapping(value = { "/{url}" })
 	public String single(ModelMap map,@PathVariable("url") String url) throws UnsupportedEncodingException {
-		
-
 		map.addAttribute("book", bookService.getBookByUrl(url));
-
 		return "single";
 	}
 }

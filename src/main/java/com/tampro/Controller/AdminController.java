@@ -105,14 +105,22 @@ public class AdminController {
 		if (result.hasErrors()) {
 			return "formuser";
 		}
-		if (userservice.addUsers(user) == false) {
+		String regex ="[a-zA-Z]";
+		if(user.getUsername().matches(regex)) { // nếu username ko có kí tự số thì ta đi kiểm tra bình thường
+			if (userservice.addUsers(user) == false) {
+				System.out.println("Tạo Không Thành Công");
+				map.addAttribute("msg", "Thêm Thất Bại");
+			} else {
+				System.out.println("Tạo  Thành Công");
+				map.addAttribute("msg", "Thêm Thành công");
+				map.addAttribute("user", new Users());
+			}
+		}
+		else { // nếu có số thì thất bại luôn
 			System.out.println("Tạo Không Thành Công");
 			map.addAttribute("msg", "Thêm Thất Bại");
-		} else {
-			System.out.println("Tạo  Thành Công");
-			map.addAttribute("msg", "Thêm Thành công");
-			map.addAttribute("user", new Users());
 		}
+		
 
 		return "formuser";
 	}

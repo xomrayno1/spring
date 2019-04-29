@@ -22,10 +22,7 @@ public class CartItemController {
 	@GetMapping("/delete-items/{id}")
 	public String deleteItem(ModelMap map,@PathVariable("id") int id,HttpSession session) {
 		
-		
 		List<CartItem> list = (List<CartItem>)session.getAttribute("cart");
-		
-		
 		for(CartItem cartItem : list) {
 			if(cartItem.getBook().getId()==id) {
 				list.remove(cartItem);

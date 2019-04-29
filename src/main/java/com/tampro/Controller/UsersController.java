@@ -30,10 +30,16 @@ public class UsersController {
 		if (result.hasErrors()) {
 			return "register";
 		}
-		if (usersService.addUsers(users) == true) {
-			return "redirect:/dang-nhap";
+		String regex = "[a-zA-Z]";
+		if (users.getUsername().matches(regex)) {
+			if (usersService.addUsers(users) == true) {
+				return "redirect:/dang-nhap";
+			} else {
+				map.addAttribute("msg", "Username Đã có người sử dụng");
+				return "register";
+			}
 		} else {
-			map.addAttribute("msg", "Username Đã có người sử dụng");
+			map.addAttribute("msg", "Username Không Được Chứa Ký Tự Số");
 			return "register";
 		}
 	}
@@ -79,7 +85,7 @@ public class UsersController {
 	public String deleteOrder(ModelMap map, @PathVariable("id") int id) {
 		orderSer.deleteOrder(id);
 		return "redirect:/user/lich-su-dat-hang";
-		
+
 	}
 
 }
