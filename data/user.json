@@ -1,0 +1,5 @@
+[{"id":52, "address":"\u0110\u00f4ng H\u00f2a - Th\u1ecb Tr\u1ea5n H\u00f2a Hi\u1ec7p trung", "firstname":"Nguyen Chi Tam", "lastname":"tam", "password":"$2a$12$LtbYtEzOBdnsiD/E9Wtj2O9Y5dj8BGhbPzuSAt.40LuHhKFfcVuHC", "phone":"01234566667", "role":"ROLE_USER", "username":"xomrayno1"},
+ {"id":53, "address":"", "firstname":"Nguyen Chi", "lastname":"tam", "password":"$2a$12$LtbYtEzOBdnsiD/E9Wtj2O9Y5dj8BGhbPzuSAt.40LuHhKFfcVuHC", "phone":"", "role":"ROLE_ADMIN", "username":"xomrayno5"},
+ {"id":92, "address":"", "firstname":"Nguyen Chi", "lastname":"tam", "password":"$2a$12$LtbYtEzOBdnsiD/E9Wtj2OokyXwnXqLrr7DGVvSOphjQzUWsVS6o2", "phone":"", "role":"ROLE_ADMIN", "username":"xomrayno2"},
+ {"id":93, "address":"\u0110\u00f4ng H\u00f2a", "firstname":"Nguyen Chi", "lastname":"tam", "password":"$2a$12$LtbYtEzOBdnsiD/E9Wtj2OokyXwnXqLrr7DGVvSOphjQzUWsVS6o2", "phone":"", "role":"ROLE_USER", "username":"xomrayno3"},
+ {"id":139, "address":"", "firstname":"Nguyen Chi", "lastname":"Tammm", "password":"$2a$12$LtbYtEzOBdnsiD/E9Wtj2O9Y5dj8BGhbPzuSAt.40LuHhKFfcVuHC", "phone":"", "role":"ROLE_USER", "username":"xomrayno6"}]
