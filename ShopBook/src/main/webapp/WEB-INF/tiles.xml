@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+        
+<tiles-definitions>  
+ 
+    <!-- Base Define -->
+    <definition name="base.definition" 
+        template="/WEB-INF/layouts/classic.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />  
+    </definition>  
+    <definition name="defaultlayout" template="/WEB-INF/layouts/defaultLayout.jsp">
+     <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"></put-attribute>
+    <put-attribute name="banner" value="/WEB-INF/layouts/banner.jsp"></put-attribute>
+    <put-attribute name="body" ></put-attribute>
+    <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"></put-attribute>
+    </definition>
+    <definition name="defaultlayoutUs" template="/WEB-INF/layouts/defaultLayoutUs.jsp">
+     <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"></put-attribute>
+    <put-attribute name="body" ></put-attribute>
+    <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="defaultlayoutAdmin" template="/WEB-INF/views/admin/layout/defaultLayout.jsp">
+     <put-attribute name="menu" value="/WEB-INF/views/admin/layout/menu.jsp"></put-attribute>
+  
+    <put-attribute name="body" ></put-attribute>    
+    </definition>
+    
+    
+    <definition name="register" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/register.jsp" />  
+    </definition>
+    <definition name="login" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/login.jsp" />  
+    </definition>
+     <definition name="news" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/news.jsp" />  
+    </definition>
+     <definition name="profile" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/profile.jsp" />  
+    </definition>
+    <definition name="updateprofile" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/updateprofile.jsp" />  
+    </definition>
+    <definition name="single" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/single.jsp" />  
+    </definition>
+    <definition name="product" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/product.jsp" />  
+    </definition>  
+    <definition name="home" extends="defaultlayout">
+      <put-attribute name="body" value="/WEB-INF/views/index.jsp" />  
+    </definition>
+    <definition name="booksearch" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/productsearch.jsp" />  
+    </definition>
+    <definition name="checkout" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/checkout.jsp" />  
+    </definition>
+    <definition name="history" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/historyorder.jsp" />  
+    </definition>
+     <definition name="detailorder" extends="defaultlayoutUs">
+      <put-attribute name="body" value="/WEB-INF/views/user/detailorder.jsp" />  
+    </definition>
+    
+      <definition name="homeAdmin" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/home.jsp" />  
+    </definition>
+    <definition name="book" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/product.jsp" />  
+    </definition>
+    <definition name="user" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/user.jsp" />  
+    </definition>
+    <definition name="formbook" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/formbook.jsp" />  
+    </definition>
+    <definition name="formuser" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/formuser.jsp" />  
+    </definition>
+    <definition name="updateBook" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/updatebook.jsp" />  
+    </definition>
+    <definition name="updateUser" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/updateuser.jsp" />  
+    </definition>
+    <definition name="ordercomplete" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/ordercomplete.jsp" />  
+    </definition>
+     <definition name="ordernocomplete" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/ordernocomplete.jsp" />  
+    </definition>
+     <definition name="detailorderadmin" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/detailorder.jsp" />  
+    </definition>
+    <definition name="category" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/category.jsp" />  
+    </definition>
+    <definition name="formcategory" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/formcategory.jsp" />  
+    </definition>
+    <definition name="updatecategory" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/updatecategory.jsp" />  
+    </definition>
+    <definition name="banner" extends="defaultlayoutAdmin">
+      <put-attribute name="body" value="/WEB-INF/views/admin/banner.jsp" />  
+    </definition>
+
+    
+    
+    
+ 
+  
+</tiles-definitions> 
